@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Converters.DataStorageConvActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/purplegradient"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/solomon"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/white"
+            android:text="Data Storage Converter"
+            android:textSize="35sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:id="@+id/upper"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingEnd="-5dp"
+        android:paddingStart="5dp"
+        android:background="@drawable/purplegradient"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintBottom_toTopOf="@+id/mid"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fromText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="-10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/white"
+            android:fontFamily="@font/solomon"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:maxLength="14"
+            android:textColor="@android:color/white"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/fromSpin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|end"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="0dp"
+            android:backgroundTint="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingEnd="-5dp"
+        android:paddingStart="5dp"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/lower"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upper"
+        app:layout_constraintVertical_chainStyle="spread">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/toText"
+            android:layout_width="0dp"
+            android:layout_marginEnd="-10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/mauve"
+            android:fontFamily="@font/solomon"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:maxLength="14"
+            android:textColor="@color/mauve"
+            android:textSize="35sp" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/toSpin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|end"
+            android:layout_marginStart="0dp"
+            android:fontFamily="@font/solomon"
+            android:backgroundTint="@color/mauve"
+            android:layout_marginTop="50dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lower"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upper"
+        app:layout_constraintVertical_chainStyle="spread">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center|end"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:textAlignment="center">
+
+                <TextView
+                    android:id="@+id/bytes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/solomon"
+                    android:padding="5dp"
+                    android:text="bytes :: "
+                    android:textColor="@color/mauve"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/solomon"
+                    android:padding="5dp"
+                    android:text="kilobits :: "
+                    android:textColor="@color/mauve"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/kB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/solomon"
+                    android:padding="5dp"
+                    android:text="kiloBytes :: "
+                    android:textColor="@color/mauve"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/Mb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/solomon"
+                    android:padding="5dp"
+                    android:text="Megabits :: "
+                    android:textColor="@color/mauve"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/MB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/solomon"
+                    android:padding="5dp"
+                    android:text="MegaBytes :: "
+                    android:textColor="@color/mauve"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/Gb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/solomon"
+                    android:padding="5dp"
+                    android:text="Gigabits :: "
+                    android:textColor="@color/mauve"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/GB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/solomon"
+                    android:padding="5dp"
+                    android:text="GigaBytes :: "
+                    android:textColor="@color/mauve"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/TB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/solomon"
+                    android:padding="5dp"
+                    android:text="TeraBytes :: "
+                    android:textColor="@color/mauve"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

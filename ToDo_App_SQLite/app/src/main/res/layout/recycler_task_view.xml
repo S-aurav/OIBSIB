@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/taskRadio"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/taskTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/taskRadio"
+            android:layout_alignBottom="@+id/taskRadio"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@+id/setFav"
+            android:layout_toEndOf="@+id/taskRadio"
+            android:fontFamily="@font/solomon"
+            android:gravity="center|start"
+            android:text="taskText"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/setFav"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:button="@drawable/ic_set_fav"
+            android:padding="10dp" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

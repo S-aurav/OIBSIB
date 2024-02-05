@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:paddingTop="15dp"
+        android:paddingEnd="10dp"
+        android:gravity="end|center"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:layout_marginEnd="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="end|center"
+            app:srcCompat="@drawable/google"
+            android:scaleType="centerCrop"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:tabGravity="start"
+        app:tabIndicatorGravity="bottom"
+        app:tabMode="fixed">
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-1dp">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurfaceDim"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarWidgetTheme"
+        tools:layout_editor_absoluteY="118dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/addList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_ico_dark"
+            android:backgroundTint="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageButton
+            android:id="@+id/moreOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more_options"
+            android:backgroundTint="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"
+            android:src="@android:drawable/ic_input_add"
+            app:layout_constraintBottom_toTopOf="@+id/addList"
+            app:layout_constraintEnd_toEndOf="@+id/addList"
+            android:focusable="true"
+            android:contentDescription="Create new task" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

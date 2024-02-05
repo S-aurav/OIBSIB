@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MenuFrag">
+
+    <fragment
+        android:id="@+id/MenuFrag"
+        android:name="com.example.unitconverter.Converters.MenuFragment"
+        android:label="@string/menu_fragment_label"
+        tools:layout="@layout/fragment_menu">
+
+        <action
+            android:id="@+id/action_MenuFragment_to_LengthFragment"
+            app:destination="@id/LengthFrag" />
+
+        <action
+            android:id="@+id/action_MenuFragment_to_AreaFragment"
+            app:destination="@id/AreaFrag" />
+
+        <action
+            android:id="@+id/action_MenuFragment_to_WeightFragment"
+            app:destination="@id/WeightFrag" />
+
+        <action
+            android:id="@+id/action_MenuFragment_to_TemperatureFragment"
+            app:destination="@id/TemperatureFrag" />
+
+        <action
+            android:id="@+id/action_MenuFragment_to_DataStorageFragment"
+            app:destination="@id/DataStorageFrag" />
+
+        <action
+            android:id="@+id/action_MenuFragment_to_VolumeFragment"
+            app:destination="@id/VolumeFrag" />
+    </fragment>
+
+    <activity
+        android:id="@+id/LengthFrag"
+        android:name="com.example.unitconverter.Converters.LengthConvActivity"
+        android:label="@string/length_fragment_label"
+        tools:layout="@layout/activity_length_converter">
+
+    </activity>
+
+    <activity
+        android:id="@+id/AreaFrag"
+        android:name="com.example.unitconverter.Converters.AreaConvActivity"
+        android:label="@string/area_fragment_label"
+        tools:layout="@layout/activity_area_converter">
+
+    </activity>
+
+    <activity
+        android:id="@+id/WeightFrag"
+        android:name="com.example.unitconverter.Converters.WeightConvActivity"
+        android:label="@string/weight_fragment_label"
+        tools:layout="@layout/activity_weight_converter">
+
+    </activity>
+
+    <activity
+        android:id="@+id/TemperatureFrag"
+        android:name="com.example.unitconverter.Converters.TemperatureConvActivity"
+        android:label="@string/temperature_fragment_label"
+        tools:layout="@layout/activity_temperature_converter">
+
+    </activity>
+
+    <activity
+        android:id="@+id/DataStorageFrag"
+        android:name="com.example.unitconverter.Converters.DataStorageConvActivity"
+        android:label="@string/datastorage_fragment_label"
+        tools:layout="@layout/activity_data_storage_converter">
+
+    </activity>
+
+    <activity
+        android:id="@+id/VolumeFrag"
+        android:name="com.example.unitconverter.Converters.VolumeConvActivity"
+        android:label="@string/volume_fragment_label"
+        tools:layout="@layout/activity_volume_converter">
+
+    </activity>
+</navigation>
